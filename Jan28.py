@@ -74,9 +74,30 @@ s1 = Series(list4)
 s2 = Series(list5)
 s3 = Series(list6)
 
-## lists to DataFrame
+## create DataFrame from lists or series
+list7 = range(60,65)
+zip(list4,list6)
+zip1 = zip(list4,list6,list7)
+df1 = DataFrame(zip1)
+df2 = DataFrame(zip1,columns = ['two','apple',':)'])
 
-dataframe1=DataFrame([s1])
+df3 = DataFrame(zip1, columns = [2,'2',':)'])
+df3[2] # reference column with key (int) 2
+df3['2'] # reference column with key (str) '2'
+df3[3:4] # slice out row 3
+df3[['2',':)']][3:4] # get columms '2' and ':)' then
+                        # get row 3
+## make a dataframe using dict notation
+df4 = DataFrame({':(':list4,9:list6})
+dict1 = {':(':list4,9:list6}
+
+## creating dataframe from series ONLY
+
+df5 = pd.concat([s1,s2])
+
+
+
+
 
 
 
